@@ -10,8 +10,9 @@ async function getGames(userId, cursor) {
 }
 export default async function(userId) {
   let total = 0;     
-  const allGames = getGames(userId);         
-  allGames.forEach((e, i) => {
+  const [allGames, na] = getGames(userId);                  
+  console.log(allGames, na);
+  allGames.forEach((e, i) => {     
     total += e.placeVisits || 0;
   });
   return total;
