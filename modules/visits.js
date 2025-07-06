@@ -12,7 +12,7 @@ async function getGames(userId, cursor) {
 }
 export default async function(userId) {
   let total = 0;     
-  const [allGames, na] = getGames(userId);                  
+  const [allGames, na] = await getGames(userId);                  
   console.log(allGames, na);
   allGames.forEach((e, i) => {     
     total += e.placeVisits || 0;
