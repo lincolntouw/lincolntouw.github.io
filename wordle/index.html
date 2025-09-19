@@ -13,7 +13,7 @@
 
         body {
             font-family: 'Helvetica Neue', Arial, sans-serif;
-            background-color: #121213;
+            background-color:#575547;
             color: #ffffff;
             display: flex;
             flex-direction: column;
@@ -78,18 +78,18 @@
         }
 
         .tile.correct {
-            background-color: #538d4e;
-            border-color: #538d4e;
+            background-color: #21d188;
+            border-color: #21d188;
         }
 
         .tile.present {
-            background-color: #b59f3b;
-            border-color: #b59f3b;
+            background-color: #e6e29e;
+            border-color: #e6e29e  ;         
         }
 
         .tile.absent {
-            background-color: #3a3a3c;
-            border-color: #3a3a3c;
+            background-color: #757575;   
+            border-color: #757575;     
         }
 
         .tile.flip {
@@ -294,14 +294,14 @@
             [279]: 'ANGEL',  
             [280]: 'GHOST',                 
             [281]: 'AMBER',                                                                         
-        }
+        };
 
         (async()=>{
           var words = await(await fetch("https://raw.githubusercontent.com/woctezuma/3b1b-wordle-solver/refs/heads/main/data/wordle/allowed_words.txt")).text()
           words = words.split('\n');   
           words.forEach((e, i) => { words[i] = e.toUpperCase(); });
           words.push("BUZZY");  
-          words.push( "JESTY")   
+          words.push( "JESTY")   ;
           class WordleGame {
               constructor() {
                   this.words = words;       
